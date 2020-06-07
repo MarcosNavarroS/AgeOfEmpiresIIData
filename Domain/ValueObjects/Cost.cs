@@ -1,4 +1,4 @@
-﻿namespace AgeOfEmpiresIIData.Domain.ValueObject
+﻿namespace Domain.ValueObjects
 {
     public class Cost
     {

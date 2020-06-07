@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using AgeOfEmpiresIIData.Domain.ValueObject;
+using Domain.ValueObjects;
 
-namespace AgeOfEmpiresIIData.Domain.Unit
+namespace Domain.Units
 {
     public class Unit
     {
@@ -27,7 +27,7 @@ namespace AgeOfEmpiresIIData.Domain.Unit
         public string? Accuracy { get; }
         public decimal? BlastRadius { get; }
 
-        public Unit(
+        /*public Unit(
             int id,
             string name,
             string expansion,
@@ -72,6 +72,6 @@ namespace AgeOfEmpiresIIData.Domain.Unit
             SearchRadius = searchRadius;
             Accuracy = accuracy;
             BlastRadius = blastRadius;
-        }
+        }*/
     }
 }
