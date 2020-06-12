@@ -3,14 +3,14 @@ using Domain.ValueObjects;
 
 namespace Domain.Units
 {
-    public class Unit
+    public class Unit : IUnit
     {
         public int Id { get; }
-        public string Name { get; }
-        public string Expansion { get; }
-        public string Age { get; }
-        public string CreatedIn { get; }
-        public Cost Cost { get; }
+        public string Name { get; } = null!;
+        public string Expansion { get; } = null!;
+        public string Age { get; } = null!;
+        public string CreatedIn { get; } = null!;
+        public Cost Cost { get; } = null!;
         public int BuildTime { get; }
         public decimal ReloadTime { get; }
         public decimal MovementRate { get; }

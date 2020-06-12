@@ -6,16 +6,16 @@ namespace Application.UseCases
 {
     public sealed class GetUnitUseCase : IGetUnitUseCase
     {
-        public IUnitRepository UnitRepository { get; }
+        private readonly IUnitRepository _unitRepository;
 
         public GetUnitUseCase(IUnitRepository unitRepository)
         {
-            UnitRepository = unitRepository;
+            _unitRepository = unitRepository;
         }
 
-        public Task Execute(GetUnitInput input)
+        public async Task Execute(GetUnitInput input)
         {
-            throw new System.NotImplementedException();
+            IUnit unit = await _unitRepository.GetUnit(input.UnitId);
         }
     }
 }

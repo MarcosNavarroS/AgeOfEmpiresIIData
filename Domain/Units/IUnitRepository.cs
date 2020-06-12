@@ -4,6 +4,6 @@ namespace Domain.Units
 {
     public interface IUnitRepository
     {
-        Task<Unit> GetUnit(int unitId);
+        Task<IUnit> GetUnit(int unitId);
     }
 }
