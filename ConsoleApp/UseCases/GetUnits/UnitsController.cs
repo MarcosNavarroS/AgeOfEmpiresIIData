@@ -1,14 +1,21 @@
-﻿namespace ConsoleApp.UseCases.GetUnits
+﻿using Application.Boundaries.GetUnit;
+using Domain.Units;
+
+namespace ConsoleApp.UseCases.GetUnits
 {
     public class UnitsController
     {
-        public UnitsController()
+        private IGetUnitUseCase GetUnitUseCase { get; }
+
+        public UnitsController(IGetUnitUseCase getUnitUseCase)
         {
+            GetUnitUseCase = getUnitUseCase;
         }
 
-        public void GetUnits()
+        public void GetUnit(int unitId)
         {
-
+            GetUnitInput getUnitInput = new GetUnitInput(unitId);
+            IUnit unit = GetUnitUseCase.Execute();
         }
     }
 }
